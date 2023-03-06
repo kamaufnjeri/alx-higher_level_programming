@@ -1,4 +1,4 @@
-#!/usr/bin/python3Zen of Python, by Tim Peters
+#!/usr/bin/python3
 str = f"""
 The Zen of Python, by Tim Peters
 
