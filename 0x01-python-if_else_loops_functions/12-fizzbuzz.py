@@ -8,4 +8,4 @@ for num in range(1, 100):
         print("Fizz", end=" ")
     else:
         print(f"{num}", end=" ")
-print("Buzz")
+print("Buzz ")
