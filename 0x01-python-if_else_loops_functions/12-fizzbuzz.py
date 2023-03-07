@@ -8,4 +8,3 @@ for num in range(1, 101):
         print("Fizz", end=" ")
     else:
         print(f"{num}", end=" ")
-print("$")
