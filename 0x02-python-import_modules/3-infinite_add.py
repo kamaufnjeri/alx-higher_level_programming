@@ -11,4 +11,4 @@ if __name__ == "__main__":
     else:
         for i in range(count):
             add += int(sys.argv[i + 1])
-        print(add)
+    print(add)
