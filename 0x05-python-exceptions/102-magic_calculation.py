@@ -11,5 +11,5 @@ def magic_calculation(a, b):
                 result += a ** b / i
         except:
             result = a + b
-            break
+        break
     return result
