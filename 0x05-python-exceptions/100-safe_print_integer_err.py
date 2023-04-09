@@ -4,5 +4,6 @@ def safe_print_integer_err(value):
         if isinstance(value, int):
             print(value)
             return True
-    except TypeError:
+    except TypeError as msg:
+        Sys.stderr.write("{}".format(msg))
         return False
