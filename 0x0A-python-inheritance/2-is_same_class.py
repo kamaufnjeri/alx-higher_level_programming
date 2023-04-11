@@ -4,7 +4,7 @@
 
 def is_same_class(obj, a_class):
     """Check if obj is class a_class
-    
+
     Args:
         obj: object to check
         a_class: class to find if obj belongs t0
