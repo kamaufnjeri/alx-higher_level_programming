@@ -2,6 +2,7 @@
 """Class Override == operator with !="""
 
 class MyInt(int):
+    """Override == operator and !="""
 
     def __eq__(self, b):
 
