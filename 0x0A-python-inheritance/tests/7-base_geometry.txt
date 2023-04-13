@@ -58,7 +58,7 @@ Check with entering arguments without raising an error
 Raising an exception when passing arguments by entering a string
 
 >>> try:
-...     bg.integer_validator("name", True)
+...     bg.integer_validator("name", "John")
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] name must be an integer
