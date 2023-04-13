@@ -42,13 +42,14 @@ Check that passing in two strings throws a TypeError
 [TypeError] name must be an integer
 
 Check that passing in value equal to 0 throws a ValueError
+
+
+Check that passing in value equal to  0 throws a ValueError
 >>> try:
-...     bg.integer_validator("age", 0)
+...     bg.integer_validator("distance", -4)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
-[ValueError] age must be greater than 0
-
-
+[ValueError] distance must be greater than 0
 
 Check that call to area method raises an Exception
 
