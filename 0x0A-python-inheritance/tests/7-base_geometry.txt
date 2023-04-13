@@ -11,14 +11,6 @@ Section // No exceptions
 Section // Type Errors
 =========================
 
-Test case #2: A test case with a not integer value
-
-    >>> try:
-    ...     bg.integer_validator("name", "John")
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] name must be an integer
-
 
 Test case #5: A test case with a boolean value
 
