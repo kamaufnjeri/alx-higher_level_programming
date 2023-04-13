@@ -1,64 +1,33 @@
-===============================
-7. Integer validator module
-===============================
-
 Import module:
 ==============
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-    >>> bg = BaseGeometry()
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry
+
+passing arguments the first arguments 
+>>> bg.integer_validator("my_int", 12)
+
+passing the second arguments
+
+>>> bg.integer_validator("width", 89)
 
 
-Function:
-=========
-Write a class BaseGeometry (based on 6-base_geometry.py).
+Checking for errors 1.TypeError
 
-    * You can assume name is always a string
-    * If value is not an integer: raises a TypeError exception
-    * If value is less or equal to 0: raises a ValueError exception
+Value is not an integer
 
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+TypeError: name must be an integer
 
-Section // No exceptions
-=========================
-
-Test case #0: A test case with good parameters
     
-    >>> bg.integer_validator("my_int", 12)
+test with a boolean
+>>> bg.integer_validator("age", True)
+Traceback (most recent call last):
+TypeError: age must be an integer
 
+test wit
 
-Test case #1: A test case with good parameters
-
-    >>> bg.integer_validator("width", 89)
-
-
-Section // Type Errors
-=========================
-
-Test case #2: A test case with a not integer value
-
-    >>> try:
-    ...     bg.integer_validator("name", "John")
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] name must be an integer
-
-
-Test case #7: A test case with a string value
-
-    >>> try:
-    ...     bg.integer_validator("name", 'Monty Python')
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] name must be an integer
-    
-test wiy
-
-    >>> bg.integer_validator("age",True)
-    Traceback (most recent call last):
-    TypeError: age must be an integer
-
-test without
-
-    >>> bg.integer_validator("age",None)
+    >>> bg.integer_validator("age", None)
     Traceback (most recent call last):
     TypeError: age must be an integer
 
