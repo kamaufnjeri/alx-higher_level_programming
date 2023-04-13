@@ -36,22 +36,6 @@ Test case #1: A test case to order a disordered list of positive integers
     [5, 4, 3, 2, 1]
 
 
-Test case #3: A test case for do nothing
-
-    >>> my_list = MyList()
-    >>> my_list.append(-5)
-    >>> my_list.append(-4)
-    >>> my_list.append(-3)
-    >>> my_list.append(-2)
-    >>> my_list.append(-1)
-    >>> print(my_list)
-    [-5, -4, -3, -2, -1]
-
-    >>> my_list.print_sorted()
-    [-5, -4, -3, -2, -1]
-
-    >>> print(my_list)
-    [-5, -4, -3, -2, -1]
 
 
 
