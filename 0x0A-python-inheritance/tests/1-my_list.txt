@@ -1,5 +1,5 @@
 =======================
-How to use 1-my_list.py
+1. Print sorted module
 =======================
 
 A module that defines a class ``Mylist`` that inherits from ``list``.
