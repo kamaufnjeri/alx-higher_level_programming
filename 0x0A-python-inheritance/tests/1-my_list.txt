@@ -9,6 +9,18 @@ Import module:
 Section // No exceptions
 =========================
 
+Test case #2: A test case for a empty list
+
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+
+    >>> my_list.print_sorted()
+    []
+
+    >>> print(my_list)
+    []
+
 Test case #0: A test case to order a disordered list of positive integers
 
     >>> my_list = MyList()
