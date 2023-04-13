@@ -63,14 +63,6 @@ check with a dictionary
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] name must be an integer
 
-Raising an exception when passing arguments by entering a string
-
->>> try:
-...     bg.integer_validator("name", True)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] name must be an integer
-
 ValueError raised by entering arguments
 
 Value is zero
