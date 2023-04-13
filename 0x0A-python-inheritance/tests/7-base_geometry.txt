@@ -8,6 +8,13 @@ Import Module:
 
 Check the different data types in python
 
+check with entering arguments without raising errors
+
+>>> bg.integer_validator("my_int", 12)
+
+Check with entering arguments without raising an error
+>>> bg.integer_validator("width", 89)
+
 check with a boolean
 
 >>> try:
@@ -47,13 +54,6 @@ check with a dictionary
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] name must be an integer
-
-check with entering arguments without raising errors
-
->>> bg.integer_validator("my_int", 12)
-
-Check with entering arguments without raising an error
->>> bg.integer_validator("width", 89)
 
 Raising an exception when passing arguments by entering a string
 
