@@ -4,35 +4,17 @@ Import the module
 
 Check print_sorted with empty list
 >>> my_list = MyList()
+>>> print(my_list)
+[]
+
 >>> my_list.print_sorted()
 []
 
-
-Check that object can be created
->>> my_list = MyList()
->>> my_list
-[]
-
-Check that an empty string can be printed
->>> my_list = MYList()
 >>> print(my_list)
 []
-
-Check that ``MyList`` takes arguments
->>> my_list = MyList([1, 2, 3)
->>> print(my_list)
-[1, 2, 3]
-
-Check that it can use the append method
->>> my_list = MYList()
->>> my_list.append(1)
->>> my_list.append(2)
->>> my_list.append(3)
->>> print(my_list)
-[1, 2, 3]
 
 check that it can print sorted and not modifty the list
->>> my_list = MYList()
+>>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
@@ -48,7 +30,7 @@ check that it can print sorted and not modifty the list
 [1, 4, 2, 3, 5]
 
 Check that it can print negative integers sort and not modify the list
->>> my_list = MYList()
+>>> my_list = MyList()
 >>> my_list.append(-1)
 >>> my_list.append(-2)
 >>> my_list.append(-3)
@@ -61,10 +43,10 @@ Check that it can print negative integers sort and not modify the list
 [-5, -4, -3, -2, -1]
 
 >>> print(my_list)
-[-1, -4, -2, -3, -5]
+[-1, -2, -3, -4, -5]
 
 Check that it can print strings sort and not modify
->>> my_list = MYList()
+>>> my_list = MyList()
 >>> my_list.append('love')
 >>> my_list.append('eye')
 >>> my_list.append('key')
@@ -72,19 +54,8 @@ Check that it can print strings sort and not modify
 ['love', 'eye', 'key']
 
 >>> my_list.print_sorted()
-['eye', 'key' 'love']
+['eye', 'key', 'love']
 
 >>> print(my_list)
 ['love', 'eye', 'key']
 
-check that it can take both string and integers but cannot sort it
->>> my_list = MYList()
->>> my_list.append('1')
->>> my_list.append('eye')
->>> my_list.append('2')
->>> print(my_list)
-['1', 'eye', '2']
-
->>> my_list.print_sorted()
-Traceback (most recent last calls):
-TypeError: unorderable types: str() < int()
