@@ -5,6 +5,23 @@ Import module:
 Section // No exceptions
 =========================
 
+Test case #1: A test case to order a disordered list of positive integers
+
+    >>> my_list = MyList()
+    >>> my_list.append(5)
+    >>> my_list.append(4)
+    >>> my_list.append(3)
+    >>> my_list.append(2)
+    >>> my_list.append(1)
+    >>> print(my_list)
+    [5, 4, 3, 2, 1]
+
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+    >>> print(my_list)
+    [5, 4, 3, 2, 1]
+
 Test case #2: A test case for a empty list
 
     >>> my_list = MyList()
@@ -34,9 +51,4 @@ Test case #3: A test case for do nothing
 
     >>> print(my_list)
     [-5, -4, -3, -2, -1]
-
-
-
-
-
-
+    
