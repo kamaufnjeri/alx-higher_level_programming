@@ -1,33 +1,11 @@
-===============================
-7. Integer validator module
-===============================
-
 Import module:
 ==============
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
     >>> bg = BaseGeometry()
 
 
-Function:
-=========
-Write a class BaseGeometry (based on 6-base_geometry.py).
-
-    * You can assume name is always a string
-    * If value is not an integer: raises a TypeError exception
-    * If value is less or equal to 0: raises a ValueError exception
-
-
 Section // No exceptions
 =========================
-
-Test case #0: A test case with good parameters
-    
-    >>> bg.integer_validator("my_int", 12)
-
-
-Test case #1: A test case with good parameters
-
-    >>> bg.integer_validator("width", 89)
 
 
 Section // Type Errors
