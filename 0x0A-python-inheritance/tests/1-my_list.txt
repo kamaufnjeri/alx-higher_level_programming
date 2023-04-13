@@ -1,20 +1,17 @@
-=======================
-1. Print sorted module
-=======================
-
-A module that defines a class ``Mylist`` that inherits from ``list``.
-
-Import Module:
-==============
+This doctest checks a script that creates a Mylist class.
+Import the module
 >>> MyList = __import__('1-my_list').MyList
 
-Function:
-=========
-Write a class MyList that inherits from list:
- 
+Check print_sorted with empty list
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
 
-Section // No exceptions
-========================
+
+Check that object can be created
+>>> my_list = MyList()
+>>> my_list
+[]
 
 Check that an empty string can be printed
 >>> my_list = MYList()
@@ -79,9 +76,6 @@ Check that it can print strings sort and not modify
 
 >>> print(my_list)
 ['love', 'eye', 'key']
-
-section // Errors
-=================
 
 check that it can take both string and integers but cannot sort it
 >>> my_list = MYList()
