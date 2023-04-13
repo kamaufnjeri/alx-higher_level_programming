@@ -16,7 +16,6 @@ Test case #5: A test case with a boolean value
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
-
 Test case #7: A test case with a string value
 
 >>> try:
