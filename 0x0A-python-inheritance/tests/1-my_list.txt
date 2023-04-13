@@ -87,18 +87,3 @@ Test case #4: A test case to order a disordered list of negative integers
     [-1, -4, -2, -3, -5]
 
 
-Section // Attribute Errors
-============================
-
-Test case #5: A invalid test case of tuples
-
-    >>> my_list = (1, 2)
-    >>> print(my_list)
-    (1, 2)
-    
-    >>> my_list.print_sorted()
-    Traceback (most recent call last):
-    AttributeError: 'tuple' object has no attribute 'print_sorted'
-
-    >>> print(my_list)
-    (1, 2)
