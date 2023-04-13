@@ -6,13 +6,6 @@ Import module:
 ==============
     >>> MyList = __import__('1-my_list').MyList
 
-
-Function:
-=========
-Write a class MyList that inherits from list:
-
-    * You can assume that all the elements of the list will be of type int
-
 Section // No exceptions
 =========================
 
