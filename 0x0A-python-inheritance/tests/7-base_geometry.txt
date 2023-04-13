@@ -1,6 +1,6 @@
 Import module:
 ==============
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> BaseGeometry = __import__('7-base_gometry').BaseGeometry
     >>> bg = BaseGeometry()
 
 
@@ -19,7 +19,7 @@ Test case #5: A test case with a boolean value
 
 Test case #7: A test case with a string value
 
->>>try:
+>>> try:
 ...     bg.integer_validator("name", 'Monty Python')
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
