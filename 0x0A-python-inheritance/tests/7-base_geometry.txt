@@ -112,6 +112,7 @@ Test case #15: A test case with a value less than zero
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [ValueError] distance must be greater than 0
 
+>>> bg.integer_validator("age", 2)
 
 Section // General Errors
 =========================
