@@ -56,6 +56,18 @@ Test case #7: A test case with a string value
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
+    
+test wiy
+
+    >>> bg.integer_validator("age",True)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+test without
+
+    >>> bg.integer_validator("age",None)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
 
 Test case #9: A test case with a list value
 
