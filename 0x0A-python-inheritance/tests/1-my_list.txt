@@ -6,10 +6,15 @@ A module that defines a class ``Mylist`` that inherits from ``list``.
 
 Import Module:
 ==============
->>>MyList = __import__('1-my_list').MyList
+>>> MyList = __import__('1-my_list').MyList
 
-Usage:
-======
+Function:
+=========
+Write a class MyList that inherits from list:
+ 
+
+Section // No exceptions
+========================
 
 Check that an empty string can be printed
 >>> my_list = MYList()
@@ -74,6 +79,9 @@ Check that it can print strings sort and not modify
 
 >>> print(my_list)
 ['love', 'eye', 'key']
+
+section // Errors
+=================
 
 check that it can take both string and integers but cannot sort it
 >>> my_list = MYList()
