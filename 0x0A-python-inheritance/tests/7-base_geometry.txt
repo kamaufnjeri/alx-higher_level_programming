@@ -5,6 +5,28 @@ Import the module
 Create class instqance
 >>> bg = BaseGeometry()
 
+Test different data types
+>>> bg.integer_validator("age",(4,))
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> bg.integer_validator("age",[3])
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> bg.integer_validator("age",True)
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+
+>>> bg.integer_validator("age",{3, 4})
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> bg.integer_validator("age",None)
+Traceback (most recent call last):
+TypeError: age must be an integer
+
 
 Check that you can pass in a string and int without raised error
 >>> bg.integer_validator("my_int", 12)
@@ -26,13 +48,6 @@ Check that passing in value equal to 0 throws a ValueError
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [ValueError] age must be greater than 0
 
-
-Check that passing in value equal to  0 throws a ValueError
->>> try:
-...     bg.integer_validator("distance", -4)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[ValueError] distance must be greater than 0
 
 
 Check that call to area method raises an Exception
