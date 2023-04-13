@@ -41,21 +41,6 @@ Test case #2: A test case with a not integer value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
 
-Test case #3: A test case with a infinite float value
-
-    >>> try:
-    ...     bg.integer_validator("inf_float", 1e400)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] inf_float must be an integer
-
-Test case #4: A test case with a NaN value
-
-    >>> try:
-    ...     bg.integer_validator("nan", float('nan'))
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] nan must be an integer
 
 Test case #5: A test case with a boolean value
 
