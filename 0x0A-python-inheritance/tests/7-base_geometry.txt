@@ -1,0 +1,110 @@
+Module about a script that creates the BaseGeometry class
+==========================================================
+
+Import Module:
+==============
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+Check the different data types in python
+
+check with a boolean
+
+>>> try:
+...	bg.integer_validator("name", True)
+... except Exception as e:
+...	print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+check with a list
+
+>>> try:
+...     bg.integer_validator("name", [3])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+check with a tuple
+
+>>> try:
+...     bg.integer_validator("name", (3, ))
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+check with a null value
+
+>>> try:
+...     bg.integer_validator("name", None)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+check with a dictionary
+
+>>> try:
+...     bg.integer_validator("name", {3, 5})
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+check with entering arguments without raising errors
+
+>>> bg.integer_validator("my_int", 12)
+
+Check with entering arguments without raising an error
+>>> bg.integer_validator("width", 89)
+
+Raising an exception when passing arguments by entering a string
+
+>>> try:
+...     bg.integer_validator("name", True)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+ValueError raised by entering arguments
+
+Value is zero
+
+>>> try:
+...     bg.integer_validator("age", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] age must be greater than 0
+
+Value is less than zero
+
+>>> try:
+...     bg.integer_validator("distance", -4)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] distance must be greater than 0
+
+Errors due to number of arguments entered
+
+Only one argument entered
+
+>>> bg.integer_validator("love")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Without any arguments
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+With excess arguments
+
+>>> bg.integer_validator("name", 2, 3)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Exception error raised since method not used
+
+>>> try:
+...     bg.area()
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[Exception] area() is not implemented
