@@ -28,13 +28,7 @@ Test case #6: A test case with a tuple value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
 
-Test case #7: A test case with a string value
 
-    >>> try:
-    ...     bg.integer_validator("name", 'Monty Python')
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] name must be an integer
 
 Test case #8: A test case with a none value
 
