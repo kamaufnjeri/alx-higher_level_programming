@@ -55,7 +55,6 @@ class Square(object):
         string = ""
         if self.__size == 0:
             return ("")
-        
         for i in range(self.__position[1]):
             string += "\n"
         for i in range(self.__size):
@@ -65,4 +64,3 @@ class Square(object):
                 string += "#"
             string += "\n"
         return string[:-1]
-
