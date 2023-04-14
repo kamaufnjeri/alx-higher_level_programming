@@ -48,3 +48,4 @@ class Square(object):
             print("")
         if self.__size == 0:
             print("")
+            return None
