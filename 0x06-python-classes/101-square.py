@@ -51,16 +51,12 @@ class Square(object):
             print("")
 
     def __str__(self):
-        string = ""
+        """Print representation of squares"""
         if self.size == 0:
-            string = "\n"
-            return string
-        for i in range(self.position[1]):
-            string = "\n"
-        for i in range(self.size):
-            for j in range(self.position[0]):
-                string += " "
-            for g in range(self.size):
-                string += "#"
-            string += "\n"
-        return string
+            return
+        else:
+            str = '\n' * self.__position[1]
+        for i in range(self.__size):
+            str += ' ' * self.position[0]
+            str += '#' * self.__size + '\n'
+        return str[:-1]
