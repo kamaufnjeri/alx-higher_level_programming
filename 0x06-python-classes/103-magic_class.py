@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"Magic class converting python bytecode to class"""
+""" Magic class in python"""
 import math
 
 
 class MagicClass:
-    """Class fo assemble bytecode"""
+    """assembling a python bytecode"""
 
     def __init__(self, radius=0):
         self.__radius = 0
-
         if type(radius) is not int and type(radius) is not float:
-            raise TypeError('radius must be an integer')
+            raise TypeError('radius must be a number')
         self.__radius = radius
 
     def area(self):
