@@ -5,6 +5,7 @@ other classes and manages the id attribute
 """
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -100,5 +101,45 @@ class Base:
             return []
 
     @staticmethod
-    def draw(list_rectangles, list_squares)
-    """draw a list of rectangles"""
+    def draw(list_rectangles, list_squares):
+        """draw a list of rectangles"""
+        t = turtle.Turtle()
+        wn = turtle.Screen()
+        wn.title("DRAW")
+        wn.bgcolor("black")
+        t.shape('turtle')
+        t.pensize(2)
+        t.color("white")
+        k = 0
+        list = ['red', 'green', 'blue', 'yellow', 'blue', 'orange', 'indigo']
+        for rectangle in list_rectangles:
+            t.up()
+            t.goto(rectangle.x, rectangle.y)
+            t.down()
+            t.begin_fill()
+            t.fillcolor(list[k])
+            for i in range(2):
+                t.forward(rectangle.width)
+                t.left(90)
+                t.forward(rectangle.height)
+                t.left(90)
+        t.end_fill()
+        t.hideturtle()
+        k += 1
+    
+        t.color("red")
+        for square in list_squares:
+            t.up()
+            t.goto(square.x, square.y)
+            t.down()
+            t.begin_fill()
+            t.fillcolor(list[k])
+            for i in range(2):
+                t.forward(square.width)
+                t.left(90)
+                t.forward(sqaure.height)
+                t.left(90)
+            t.end_fill()
+            t.hideturtle()
+            k += 1
+        turtle.exitonclick()
