@@ -104,42 +104,45 @@ class Base:
     def draw(list_rectangles, list_squares):
         """draw a list of rectangles"""
         t = turtle.Turtle()
-        wn = turtle.Screen()
-        wn.title("DRAW")
-        wn.bgcolor("black")
-        t.shape('turtle')
-        t.pensize(2)
-        t.color("white")
+        t.screen.bgcolor("black")
+        t.screen.title('DRAW RECTANGLES AND SQUARE')
+        t.pensize(3)
+        t.shape("turtle")
+        list1 = ["green", "yellow", "orange"]
         k = 0
-        list = ['red', 'green', 'blue', 'yellow', 'blue', 'orange', 'indigo']
+        t.color("blue")
         for rectangle in list_rectangles:
+            t.showturtle()
             t.up()
             t.goto(rectangle.x, rectangle.y)
             t.down()
             t.begin_fill()
-            t.fillcolor(list[k])
+            t.fillcolor(list1[k])
             for i in range(2):
                 t.forward(rectangle.width)
                 t.left(90)
                 t.forward(rectangle.height)
                 t.left(90)
-        t.end_fill()
-        t.hideturtle()
-        k += 1
-    
-        t.color("red")
+            t.end_fill()
+            t.hideturtle()
+            k += 1
+        list2 =["red", "violet", "indigo"]
+        j = 0
+        t.color("white")
         for square in list_squares:
+            t.showturtle()
             t.up()
             t.goto(square.x, square.y)
             t.down()
             t.begin_fill()
-            t.fillcolor(list[k])
+            t.fillcolor(list2[j])
             for i in range(2):
                 t.forward(square.width)
                 t.left(90)
-                t.forward(sqaure.height)
+                t.forward(square.height)
                 t.left(90)
             t.end_fill()
             t.hideturtle()
-            k += 1
-        turtle.exitonclick()
+            j += 1
+
+        turtle.exitonclick() 
