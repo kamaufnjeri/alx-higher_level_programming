@@ -42,9 +42,9 @@ class Base:
             return []
         return json.loads(json_string)
 
-    """@classmethod
+    @classmethod
     def create(cls, **dictionary):
-        method that returns an instance with all attributes already set
+        """method that returns an instance with all attributes already set"""
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         if cls.__name__ == "Square":
@@ -52,7 +52,7 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-    @classmethod
+    """@classmethod
     def load_from_file(cls):
         Deserialize strings stored in a json file
         filename = cls.__name__ + ".json"
