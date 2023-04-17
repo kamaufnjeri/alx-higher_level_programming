@@ -3,7 +3,6 @@
 import json
 import csv
 import turtle
-import os
 
 
 class Base:
@@ -56,20 +55,15 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ Returns a list of instances"""
-        filename = cls.__name__ + ".csv"
+        filename = str(cls.__name__) + ".json"
         try:
-            with open(filename, "r", encoding="utf-8") as csvfile:
-                if cls.__name__ == "Rectangle":
-                    fieldnames = ["id", "width", "height", "x", "y"]
-                else:
-                    fieldnames = ["id", "size", "x", "y"]
-                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
-                list_dicts = [dict([k, int(v)] for k, v in d.items())
-                              for d in list_dicts]
-                return [cls.create(**d) for d in list_dicts]
+            with open(filename, "r", encoding="utf-8") as f:
+                k = Base.from_json_string(f.read())
+                return [cls.create(**d) for d in k]
         except IOError:
             return []
-
+        except FileNotFoundError:
+            return []
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """save to csv files"""
