@@ -57,7 +57,7 @@ class Base:
         """Deserialize strings stored in a json file"""
         filename = cls.__name__ + ".json"
         try:
-            with open(filename, 'r', encoding="utf-8") as f:
+            with open(filename, 'r') as f:
                 k = Base.from_json_string(f.read())
             return [cls.create(**l) for l in k]
         except (FileNotFoundError, IOError):
