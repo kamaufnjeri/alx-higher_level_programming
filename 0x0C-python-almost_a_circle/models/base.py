@@ -57,10 +57,10 @@ class Base:
         """Deserialize strings stored in a json file"""
         filename = str(cls.__name__) + ".json"
         try:
-            with open(filename, 'r') as f:
-                k = Base.from_json_string(f.read())
-            return [cls.create(**l) for l in k]
-        except (FileNotFoundError, IOError):
+            with open(filename, "r") as jsonfile:
+                list_dicts = Base.from_json_string(jsonfile.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
             return []
 
     """@classmethod
