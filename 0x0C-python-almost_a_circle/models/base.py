@@ -35,9 +35,9 @@ class Base:
                 k = [obj.to_dictionary() for obj in list_objs]
                 f.write(cls.to_json_string(k))
 
-    """@staticmethod
+    @staticmethod
     def from_json_string(json_string):
-        desirialize a json string
+        """desirialize a json string"""
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
