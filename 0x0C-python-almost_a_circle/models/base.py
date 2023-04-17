@@ -55,7 +55,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """Deserialize strings stored in a json file"""
-        filename = cls.__name__ + ".json"
+        filename = str(cls.__name__) + ".json"
         try:
             with open(filename, 'r') as f:
                 k = Base.from_json_string(f.read())
