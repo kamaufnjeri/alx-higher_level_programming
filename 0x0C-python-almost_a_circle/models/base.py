@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-A module of class Base a base of all
-other classes and manages the id attribute
-"""
+""" Class Base created"""
 import json
 import csv
 import turtle
@@ -19,7 +16,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
+"""
     @staticmethod
     def to_json_string(list_dictionaries):
         """Serialize a python dictionary"""
@@ -144,3 +141,4 @@ class Base:
             j += 1
 
         turtle.exitonclick()
+"""
