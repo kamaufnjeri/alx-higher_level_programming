@@ -52,9 +52,9 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-    """@classmethod
+    @classmethod
     def load_from_file(cls):
-        Deserialize strings stored in a json file
+        """Deserialize strings stored in a json file"""
         filename = cls.__name__ + ".json"
         try:
             with open(filename, 'r', encoding="utf-8") as f:
