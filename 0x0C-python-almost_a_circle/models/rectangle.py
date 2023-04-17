@@ -1,4 +1,4 @@
-#!/usr/bin/pyhon3
+#!/usr/bin/python3
 """Module with classs Rectangle that inherits from class Base"""
 from models.base import Base
 
