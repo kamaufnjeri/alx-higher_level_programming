@@ -54,14 +54,13 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Deserialize strings stored in a json file"""
-        filename = cls.__name__ + ".json"
-        try:
-            with open(filename, "r") as f:
-                k = Base.from_json_string(f.read())
-                return [cls.create(**l) for l in k]
-        except IOError:
-            return []
+        """ Returns a list of instances"""
+        file_name = cls.__name__ + '.json'
+        if path.isfile(file_name):
+            with open(file_name, 'r', encoding='utf-8') as f:
+                dictionary = cls.from_json_string(f.read())
+            return[cls.create(**obj) for obj in dictionary]
+        return []
 
     """@classmethod
     def save_to_file_csv(cls, list_objs):
