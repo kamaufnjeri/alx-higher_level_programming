@@ -58,7 +58,7 @@ class Base:
         """ Returns a list of instances"""
         filename = cls.__name__ + ".csv"
         try:
-            with open(filename, "r", newline="") as csvfile:
+            with open(filename, "r", encoding="utf-8") as csvfile:
                 if cls.__name__ == "Rectangle":
                     fieldnames = ["id", "width", "height", "x", "y"]
                 else:
@@ -67,7 +67,7 @@ class Base:
                 list_dicts = [dict([k, int(v)] for k, v in d.items())
                               for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
-        except (IOError, FileNotFoundError):
+        except IOError:
             return []
 
     @classmethod
