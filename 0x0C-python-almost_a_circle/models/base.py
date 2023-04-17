@@ -55,7 +55,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ Returns a list of instances"""
-        filename = str(cls.__name__) + ".json"
+        filename = cls.__name__ + ".json"
         try:
             with open(filename, "r", encoding="utf-8") as f:
                 k = Base.from_json_string(f.read())
