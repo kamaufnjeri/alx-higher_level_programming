@@ -17,8 +17,6 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-
-"""
     @staticmethod
     def to_json_string(list_dictionaries):
         """Serialize a python dictionary"""
@@ -143,4 +141,3 @@ class Base:
             j += 1
 
         turtle.exitonclick()
-"""
