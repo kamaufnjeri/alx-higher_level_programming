@@ -48,7 +48,7 @@ class Base:
         """method that returns an instance with all attributes already set"""
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
-        else:
+        if cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
@@ -96,9 +96,9 @@ class Base:
         except IOError:
             return []
 
-    """@staticmethod
+    @staticmethod
     def draw(list_rectangles, list_squares):
-        draw a list of rectangles
+        """draw a list of rectangles"""
         t = turtle.Turtle()
         t.screen.bgcolor("black")
         t.screen.title('DRAW RECTANGLES AND SQUARE')
