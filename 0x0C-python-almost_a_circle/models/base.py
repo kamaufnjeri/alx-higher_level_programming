@@ -3,7 +3,6 @@
 import json
 import csv
 import turtle
-from os import path
 
 
 class Base:
