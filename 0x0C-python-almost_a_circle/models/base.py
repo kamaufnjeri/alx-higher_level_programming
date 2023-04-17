@@ -55,17 +55,17 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """Deserialize strings stored in a json file"""
-        filename = str(cls.__name__) + ".json"
+        filename = cls.__name__ + ".json"
         try:
-            with open(filename, "r") as jsonfile:
-                list_dicts = Base.from_json_string(jsonfile.read())
-                return [cls.create(**d) for d in list_dicts]
+            with open(filename, "r") as f:
+                k = Base.from_json_string(f.read())
+                return [cls.create(**l) for l in k]
         except IOError:
             return []
 
-    """@classmethod
+    @classmethod
     def save_to_file_csv(cls, list_objs):
-        save to csv files
+        """save to csv files"""
         filename = cls.__name__ + '.csv'
         with open(filename, 'w', encoding='utf-8') as f:
             if cls.__name__ == "Rectangle":
@@ -81,7 +81,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        read from csv file
+        """read from csv file"""
         filename = cls.__name__ + '.csv'
         try:
             with open(filename, 'r', encoding='utf-8') as f:
@@ -93,12 +93,12 @@ class Base:
                 k = [dict([key, int(value)] for key, value in line.items())
                      for line in csv_reader]
             return [cls.create(**l) for l in k]
-        except (FileNotFoundError, IOError):
+        except IOError:
             return []
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        draw a list of rectangles
+        """draw a list of rectangles"""
         t = turtle.Turtle()
         t.screen.bgcolor("black")
         t.screen.title('DRAW RECTANGLES AND SQUARE')
@@ -141,4 +141,4 @@ class Base:
             t.hideturtle()
             j += 1
 
-        turtle.exitonclick()"""
+        turtle.exitonclick()
