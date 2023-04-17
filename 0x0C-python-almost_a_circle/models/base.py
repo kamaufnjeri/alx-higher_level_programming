@@ -63,7 +63,7 @@ class Base:
         except (FileNotFoundError, IOError):
             return []
 
-    @classmethod
+    """@classmethod
     def save_to_file_csv(cls, list_objs):
         save to csv files
         filename = cls.__name__ + '.csv'
