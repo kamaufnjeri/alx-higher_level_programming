@@ -64,6 +64,7 @@ class Base:
             return []
         except FileNotFoundError:
             return []
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """save to csv files"""
