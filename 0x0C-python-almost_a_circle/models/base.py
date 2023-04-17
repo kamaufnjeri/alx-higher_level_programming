@@ -10,8 +10,7 @@ import turtle
 
 class Base:
     """Base class"""
-
-    __nd_objects = 0
+    __nb_objects = 0
 
     def __init__(self, id=None):
         """initialization"""
@@ -20,7 +19,7 @@ class Base:
             self.id = id
         else:
             Base.__nd_objects += 1
-            self.id = Base.__nd_objects
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
