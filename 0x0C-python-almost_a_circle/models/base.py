@@ -64,7 +64,7 @@ class Base:
             with open(filename, 'r', encoding="utf-8") as f:
                 k = Base.from_json_string(f.read())
             return [cls.create(**l) for l in k]
-        except FileNotFoundError:
+        except (FileNotFoundError, IOError):
             return []
 
     @classmethod
@@ -77,8 +77,8 @@ class Base:
             else:
                 fieldnames = ['id', 'size', 'x', 'y']
             csv_writer = csv.DictWriter(f, fieldnames=fieldnames)
-            if list_objs is None:
-                csv_writer.write("[]")
+            if list_objs is None or list_objs == []:
+                f.write("[]")
             else:
                 for obj in list_objs:
                     csv_writer.writerow(obj.to_dictionary())
@@ -97,7 +97,7 @@ class Base:
                 k = [dict([key, int(value)] for key, value in line.items())
                      for line in csv_reader]
             return [cls.create(**l) for l in k]
-        except FileNotFoundError:
+        except (FileNotFoundError, IOError):
             return []
 
     @staticmethod
@@ -126,7 +126,7 @@ class Base:
             t.end_fill()
             t.hideturtle()
             k += 1
-        list2 =["red", "violet", "indigo"]
+        list2 = ["red", "violet", "indigo"]
         j = 0
         t.color("white")
         for square in list_squares:
@@ -145,4 +145,4 @@ class Base:
             t.hideturtle()
             j += 1
 
-        turtle.exitonclick() 
+        turtle.exitonclick()
