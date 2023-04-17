@@ -96,9 +96,9 @@ class Base:
         except IOError:
             return []
 
-    @staticmethod
+    """@staticmethod
     def draw(list_rectangles, list_squares):
-        """draw a list of rectangles"""
+        draw a list of rectangles
         t = turtle.Turtle()
         t.screen.bgcolor("black")
         t.screen.title('DRAW RECTANGLES AND SQUARE')
@@ -141,4 +141,4 @@ class Base:
             t.hideturtle()
             j += 1
 
-        turtle.exitonclick()
+        turtle.exitonclick()"""
