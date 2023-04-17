@@ -3,6 +3,7 @@
 import json
 import csv
 import turtle
+import os
 
 
 class Base:
@@ -62,9 +63,9 @@ class Base:
             return[cls.create(**obj) for obj in dictionary]
         return []
 
-    """@classmethod
+    @classmethod
     def save_to_file_csv(cls, list_objs):
-        save to csv files
+        """save to csv files"""
         filename = cls.__name__ + '.csv'
         with open(filename, 'w', encoding='utf-8') as f:
             if cls.__name__ == "Rectangle":
@@ -80,7 +81,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        read from csv file
+        """read from csv file"""
         filename = cls.__name__ + '.csv'
         try:
             with open(filename, 'r', encoding='utf-8') as f:
@@ -97,7 +98,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        draw a list of rectangles
+        """draw a list of rectangles"""
         t = turtle.Turtle()
         t.screen.bgcolor("black")
         t.screen.title('DRAW RECTANGLES AND SQUARE')
