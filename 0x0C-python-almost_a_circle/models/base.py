@@ -18,16 +18,16 @@ class Base:
         else:
             self.id = id
 
-    @staticmethod
+    """@staticmethod
     def to_json_string(list_dictionaries):
-        """Serialize a python dictionary"""
+        Serialize a python dictionary
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """save to file"""
+        save to file
         with open(cls.__name__ + ".json", "w", encoding='utf-8') as f:
             if list_objs is None:
                 f.write("[]")
@@ -37,14 +37,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """desirialize a json string"""
+        desirialize a json string
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
-        """method that returns an instance with all attributes already set"""
+        method that returns an instance with all attributes already set
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         if cls.__name__ == "Square":
@@ -54,7 +54,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Deserialize strings stored in a json file"""
+        Deserialize strings stored in a json file
         filename = cls.__name__ + ".json"
         try:
             with open(filename, 'r', encoding="utf-8") as f:
@@ -65,7 +65,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """save to csv files"""
+        save to csv files
         filename = cls.__name__ + '.csv'
         with open(filename, 'w', encoding='utf-8') as f:
             if cls.__name__ == "Rectangle":
@@ -81,7 +81,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """read from csv file"""
+        read from csv file
         filename = cls.__name__ + '.csv'
         try:
             with open(filename, 'r', encoding='utf-8') as f:
@@ -98,7 +98,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """draw a list of rectangles"""
+        draw a list of rectangles
         t = turtle.Turtle()
         t.screen.bgcolor("black")
         t.screen.title('DRAW RECTANGLES AND SQUARE')
@@ -141,4 +141,4 @@ class Base:
             t.hideturtle()
             j += 1
 
-        turtle.exitonclick()
+        turtle.exitonclick()"""
