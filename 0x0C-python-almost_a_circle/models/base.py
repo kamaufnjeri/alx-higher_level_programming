@@ -79,9 +79,9 @@ class Base:
                 for obj in list_objs:
                     csv_writer.writerow(obj.to_dictionary())
 
-    @classmethod
+    """@classmethod
     def load_from_file_csv(cls):
-        """read from csv file"""
+        read from csv file
         filename = cls.__name__ + '.csv'
         try:
             with open(filename, 'r', encoding='utf-8') as f:
@@ -96,7 +96,7 @@ class Base:
         except IOError:
             return []
 
-    """@staticmethod
+    @staticmethod
     def draw(list_rectangles, list_squares):
         draw a list of rectangles
         t = turtle.Turtle()
