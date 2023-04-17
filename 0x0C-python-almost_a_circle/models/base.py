@@ -63,9 +63,9 @@ class Base:
         except IOError:
             return []
 
-    @classmethod
+    """@classmethod
     def save_to_file_csv(cls, list_objs):
-        """save to csv files"""
+        save to csv files
         filename = cls.__name__ + '.csv'
         with open(filename, 'w', encoding='utf-8') as f:
             if cls.__name__ == "Rectangle":
@@ -79,7 +79,7 @@ class Base:
                 for obj in list_objs:
                     csv_writer.writerow(obj.to_dictionary())
 
-    """@classmethod
+    @classmethod
     def load_from_file_csv(cls):
         read from csv file
         filename = cls.__name__ + '.csv'
