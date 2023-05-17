@@ -13,4 +13,4 @@ WHERE g.name NOT IN(
 	INNER JOIN tv_shows AS t
 	ON s.show_id = t.id
 	WHERE t.title = "Dexter")
-ORDER BY g.`name`;
+ORDER BY g.name;
