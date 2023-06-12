@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let k = process.argv;
+const k = process.argv;
 console.log(k);
-let j = k.length;
+const j = k.length;
 console.log(j);
