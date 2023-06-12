@@ -1,7 +1,8 @@
 #!/usr/bin/node
 const k = process.argv;
-console.log(k);
+if (k[2] === undefined) {
+  console.log('undefined');
+} else {
+  console.log(k[2]);
+}
 const j = k.length;
-k.forEach((e, idx) => {
-  console.log(`${e} ${idx}`);
-});
