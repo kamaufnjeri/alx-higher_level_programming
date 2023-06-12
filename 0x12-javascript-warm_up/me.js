@@ -2,4 +2,6 @@
 const k = process.argv;
 console.log(k);
 const j = k.length;
-console.log(j);
+k.forEach((e, idx) => {
+  console.log(`${e} ${idx}`);
+});
