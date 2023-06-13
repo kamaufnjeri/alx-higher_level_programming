@@ -1,22 +1,11 @@
 #!/usr/bin/node
 const dict = require('./101-data.js').dict;
-const arr1 = [];
-const arr2 = [];
-const arr3 = [];
+let newDict = {};
 for (const key in dict) {
-  if (dict[key] === 1) {
-    arr1.push(key);
-  } else if (dict[key] === 2) {
-    arr2.push(key);
-  } else if (dict[key] === 3) {
-    arr3.push(key);
+  if (newDict[dict[key]] === undefined) {
+    newDict[dict[key]] = [];
   } else {
-    const newDict = {};
+    newDict[dict[key]].push(key);
   }
 }
-const newDict = {
-  1: arr1,
-  2: arr2,
-  3: arr3
-};
 console.log(newDict);
