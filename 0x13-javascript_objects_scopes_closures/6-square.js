@@ -7,19 +7,13 @@ module.exports = class Square extends Squareb {
 
   charPrint (c) {
     if (c === undefined) {
-      let row = '';
-      for (let i = 0; i < this.width; i++) {
-        row += 'X';
-      }
-      for (let j = 0; j < this.width; j++) {
-        console.log(row);
-      }
+      this.print();
     } else {
       let row = '';
       for (let i = 0; i < this.width; i++) {
         row += c;
       }
-      for (let j = 0; j < this.width; j++) {
+      for (let j = 0; j < this.height; j++) {
         console.log(row);
       }
     }
