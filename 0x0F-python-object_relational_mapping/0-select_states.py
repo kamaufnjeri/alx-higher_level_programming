@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
+"""Using MySQLdb to read from database"""
 
 
 if __name__ == "__main__":
