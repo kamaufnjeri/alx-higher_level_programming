@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Usimd MySQL"""
 import sys
 import MySQLdb
 
