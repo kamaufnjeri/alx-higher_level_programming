@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """create class for a database table"""
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, String, Integer
+from sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
 
