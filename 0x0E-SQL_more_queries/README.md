@@ -1,1 +1,1 @@
-Mysql more queries
+Mysql Queries
