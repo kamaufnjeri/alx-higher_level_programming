@@ -1,23 +1,23 @@
 #!/usr/bin/node
-const myArray = [];
-
-for (let i = 0; i < process.argv.length - 2; i++) {
-  myArray.push(Number(process.argv[i + 2]));
-}
-
 function secondBiggest (arr) {
-  const arrSort = arr.sort();
-  if (arrSort.length < 2) {
-    return 0;
-  } else {
-    for (let i = arrSort.length - 2; i >= 0; i--) {
-      if (arrSort[arrSort.length - 1] !== arrSort[i]) {
-        return arrSort[i];
-      }
-    }
-    return arrSort[arrSort.length - 1];
-  }
-}
+  let max = 0;
+  let secondBig = 0;
 
-const secondBig = secondBiggest(myArray);
-console.log(secondBig);
+  for (const val of arr) {
+    const num = Number(val);
+
+    if (num > max) {
+      secondBig = max;
+      max = num;
+    } else if (num < max && num > secondBig) {
+      secondBig = num;
+    }
+  }
+
+  return secondBig;
+}
+const myArray = [];
+for (let i = 0; i < process.argv.length - 2; i++) {
+  myArray.push(process.argv[i + 2]);
+}
+console.log(secondBiggest(myArray));
