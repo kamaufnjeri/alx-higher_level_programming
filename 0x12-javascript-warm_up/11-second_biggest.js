@@ -1,22 +1,8 @@
 #!/usr/bin/node
-const myArray = [];
-
-for (let i = 0; i < process.argv.length - 2; i++) {
-  myArray.push(Number(process.argv[i + 2]));
+if (process.argv.length < 4) {
+  console.log('0');
+} else {
+  const data = process.argv.slice(2);
+  data.sort((a, b) => b - a);
+  console.log(data[1]);
 }
-
-function secondBiggest (arr) {
-  const arrSort = arr.sort();
-  if (arrSort.length < 2) {
-    return 0;
-  } else {
-    for (let i = arrSort.length - 1; i >= 0; i--) {
-      if (arrSort[arrSort.length - 1] !== arrSort[i]) {
-        return arrSort[i];
-      }
-    }
-  }
-}
-
-const secondBig = secondBiggest(myArray);
-console.log(secondBig);
