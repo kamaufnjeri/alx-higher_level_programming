@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""City class created"""
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer
 
@@ -6,6 +7,7 @@ Base = declarative_base()
 
 
 class City(Base):
+    """Class city"""
     __tablename__ = "cities"
     id = Column(
             Integer,
