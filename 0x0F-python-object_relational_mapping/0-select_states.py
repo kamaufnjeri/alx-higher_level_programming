@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
-"Connecting o a daabase"
-
+"Connecting to a daabase"
 
 if __name__ == "__main__":
-    "Run if main file"
     db = MySQLdb.connect(
             user=sys.argv[1],
             passwd=sys.argv[2],
