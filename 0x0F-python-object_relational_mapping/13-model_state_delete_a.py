@@ -15,7 +15,7 @@ if __name__ == "__main__":
             )
     Session = sessionmaker()
     Session.configure(bind=engine)
-    session = Session() 
+    session = Session()
     states = session.query(State).all()
 
     for state in states:
