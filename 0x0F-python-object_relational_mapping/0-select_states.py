@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
+"Connecting o a daabase"
+
 
 if __name__ == "__main__":
+    "Run if main file"
     db = MySQLdb.connect(
             user=sys.argv[1],
             passwd=sys.argv[2],
@@ -10,7 +13,7 @@ if __name__ == "__main__":
             port=3306
             )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id")
+    cur.execute("SELECT * FROM states ORDER BY id")
     rows = cur.fetchall()
     for row in rows:
         print("{}".format(row))
