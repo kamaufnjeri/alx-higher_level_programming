@@ -3,18 +3,31 @@
 
 def find_peak(list_of_integers):
     """The function"""
-    if not list_of_integers:
+    lis = list_of_integers
+    if len(lis) == O:
         return None
 
-    low = 0
-    high = len(list_of_integers) - 1
+    elif len(lis) == 1:
+        return lis[0]
 
-    while low < high:
-        mid = (low + high) // 2
-
-        if list_of_integers[mid] > list_of_integers[mid + 1]:
-            high = mid
+    elif len(lis) == 2:
+        if lis[1] >= lis[0]:
+            return lis[1]
         else:
-            low = mid + 1
+            return lis[0]
+    elif len(lis) == 3:
+        if lis[1] >= lis[2] and lis[1] >= lis[0]:
+            return lis[1]
+    else:
+        mid = 0 + len(lis) - 1 // 2
+        
+        if lis[mid] >= lis[mid - 1] and lis[mid] >= lis[mid - 1]:
+            return lis[mid]
+        else:
+            l_peak = find_peak(lis[:mid])
+            r_peak = find_peak(lis[mid:])
 
-    return list_of_integers[low]
+            if l_peak >= r_peak:
+                return l_peak
+            else:
+                return r_peak
