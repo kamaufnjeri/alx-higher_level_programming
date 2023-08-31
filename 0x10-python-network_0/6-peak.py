@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""A fuction to fine peak"""
+"""Defines the fuction find_peak"""
 
 
 def find_peak(list_of_integers):
-    """The function"""
+    """Return the peak value in a list"""
     if list_of_integers == []:
         return None
 
@@ -14,10 +14,10 @@ def find_peak(list_of_integers):
         return max(list_of_integers)
 
     mid = int(size / 2)
-    midd = list_of_integers[mid]
-    if midd > list_of_integers[mid - 1] and midd > list_of_integers[mid + 1]:
-        return midd
-    elif midd < list_of_integers[mid - 1]:
+    peak = list_of_integers[mid]
+    if peak > list_of_integers[mid - 1] and peak > list_of_integers[mid + 1]:
+        return peak
+    elif peak < list_of_integers[mid - 1]:
         return find_peak(list_of_integers[:mid])
     else:
         return find_peak(list_of_integers[mid + 1:])
