@@ -14,8 +14,8 @@ def find_peak(list_of_integers):
         return max(list_of_integers)
 
     mid = int(size / 2)
-    middle = list_of_integers[mid]
-    if middle > list_of_integers[mid - 1] and middle > list_of_integers[mid + 1]:
+    midd = list_of_integers[mid]
+    if midd > list_of_integers[mid - 1] and midd > list_of_integers[mid + 1]:
         return peak
     elif middle < list_of_integers[mid - 1]:
         return find_peak(list_of_integers[:mid])
