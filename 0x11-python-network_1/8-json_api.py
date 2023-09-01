@@ -8,7 +8,7 @@ if __name__ == "__main__":
     url = 'http://0.0.0.0:5000/search_user'
     data = {}
     if sys.argv[1]:
-        data['q'] =  sys.argv[1]
+        data['q'] = sys.argv[1]
     else:
         data['q'] = ""
     try:
@@ -21,5 +21,4 @@ if __name__ == "__main__":
             print(f"[{d_json.get('id')}] {d_json.get('name')}")
 
     except ValueError:
-        print("Not a valid JSON")
-~                                   
+        print("Not a valid JSOS")    
