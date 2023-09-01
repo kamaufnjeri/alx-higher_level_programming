@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""JSON search API"""
+"""Search Api"""
 import requests
 import sys
 
